@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="710" viewBox="0 0 960 710" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#5A6675"/>
+    </marker>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0D2137" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .box  { fill:#FFFFFF; stroke:#C9D4DF; stroke-width:1.3; rx:9; filter:url(#sh); }
+      .sec  { fill:#FCEFEF; stroke:#9B1C1E; stroke-width:1.6; rx:9; filter:url(#sh); }
+      .int  { fill:#EAF8FA; stroke:#00838F; stroke-width:1.4; rx:9; filter:url(#sh); }
+      .grp  { fill:#F7FAFC; stroke:#D7DEE5; stroke-width:1.1; stroke-dasharray:4 4; rx:14; }
+      .t    { fill:#1C2733; font-size:13px; }
+      .tb   { fill:#0D2137; font-size:13.5px; font-weight:bold; }
+      .ts   { fill:#5A6675; font-size:11px; }
+      .gl   { font-size:11px; font-weight:bold; letter-spacing:1.5px; }
+      .edge { stroke:#5A6675; stroke-width:1.5; fill:none; marker-end:url(#arr); }
+      .dash { stroke:#9B1C1E; stroke-width:1.4; fill:none; stroke-dasharray:5 3; marker-end:url(#arr); }
+    </style>
+  </defs>
+
+  <!-- Cabecera -->
+  <text x="40" y="38" fill="#0D2137" font-size="20" font-weight="bold">Plataforma interna de seguridad y cumplimiento</text>
+  <text x="40" y="58" fill="#5A6675" font-size="13">Arquitectura de referencia (genérica) · desarrollo y operación end-to-end</text>
+
+  <!-- Leyenda -->
+  <rect x="705" y="24" width="215" height="54" rx="8" fill="#FFFFFF" stroke="#D7DEE5"/>
+  <rect x="718" y="34" width="16" height="12" rx="3" class="sec" filter="none"/>
+  <text class="ts" x="740" y="44">Control de seguridad</text>
+  <rect x="718" y="54" width="16" height="12" rx="3" class="int" filter="none"/>
+  <text class="ts" x="740" y="64">Integración externa</text>
+
+  <!-- Bandas de capa -->
+  <rect class="grp" x="30"  y="92"  width="900" height="128"/>
+  <text class="gl" x="44" y="112" fill="#9B1C1E">ACCESO</text>
+  <rect class="grp" x="30"  y="232" width="900" height="206"/>
+  <text class="gl" x="44" y="252" fill="#00838F">APLICACIÓN &amp; DATOS</text>
+  <rect class="grp" x="30"  y="450" width="900" height="210"/>
+  <text class="gl" x="44" y="470" fill="#00838F">INTEGRACIONES · INFRAESTRUCTURA &amp; ENTREGA</text>
+
+  <!-- ACCESO -->
+  <rect class="box" x="395" y="120" width="170" height="46"/>
+  <text class="tb" x="480" y="148" text-anchor="middle">Usuarios internos</text>
+
+  <rect class="sec" x="90" y="118" width="210" height="82"/>
+  <text class="tb" x="195" y="144" text-anchor="middle">Identity Provider</text>
+  <text class="ts" x="195" y="163" text-anchor="middle">SSO · OIDC (Microsoft Entra ID)</text>
+  <text class="ts" x="195" y="181" text-anchor="middle">2FA · TOTP</text>
+
+  <rect class="box" x="395" y="184" width="170" height="30"/>
+  <text class="ts" x="480" y="203" text-anchor="middle">Frontend SPA · React / TypeScript</text>
+
+  <!-- APLICACIÓN & DATOS -->
+  <rect class="sec" x="380" y="266" width="200" height="92"/>
+  <text class="tb" x="480" y="290" text-anchor="middle">API · Python / FastAPI</text>
+  <text class="ts" x="480" y="309" text-anchor="middle">RBAC · Auditoría</text>
+  <text class="ts" x="480" y="326" text-anchor="middle">CSP · rate limiting</text>
+  <text class="ts" x="480" y="343" text-anchor="middle">gestión de secretos</text>
+
+  <rect class="box" x="380" y="378" width="200" height="48"/>
+  <text class="tb" x="480" y="398" text-anchor="middle">Módulos de negocio</text>
+  <text class="ts" x="480" y="415" text-anchor="middle">QA · validación regulatoria · informes</text>
+
+  <rect class="box" x="120" y="282" width="190" height="46"/>
+  <text class="tb" x="215" y="303" text-anchor="middle">Base de datos</text>
+  <text class="ts" x="215" y="319" text-anchor="middle">persistencia</text>
+
+  <rect class="sec" x="120" y="350" width="190" height="60"/>
+  <text class="tb" x="215" y="374" text-anchor="middle">Protección de datos</text>
+  <text class="ts" x="215" y="392" text-anchor="middle">cifrado de credenciales</text>
+  <text class="ts" x="215" y="406" text-anchor="middle">copias de seguridad</text>
+
+  <!-- INTEGRACIONES -->
+  <rect class="int" x="650" y="276" width="235" height="44"/>
+  <text class="t" x="767" y="303" text-anchor="middle">SharePoint · Microsoft Graph</text>
+  <rect class="int" x="650" y="330" width="235" height="44"/>
+  <text class="t" x="767" y="352" text-anchor="middle">Servicio IA (LLM)</text>
+  <text class="ts" x="767" y="367" text-anchor="middle">residencia de datos UE</text>
+  <rect class="int" x="650" y="384" width="235" height="44"/>
+  <text class="t" x="767" y="411" text-anchor="middle">Correo / SMTP · avisos</text>
+
+  <!-- INFRA -->
+  <rect class="box" x="70"  y="560" width="180" height="48"/>
+  <text class="t" x="160" y="582" text-anchor="middle">CI/CD</text>
+  <text class="ts" x="160" y="598" text-anchor="middle">GitHub Actions</text>
+  <rect class="box" x="300" y="560" width="130" height="48"/>
+  <text class="t" x="365" y="589" text-anchor="middle">Docker</text>
+  <rect class="box" x="480" y="560" width="220" height="48"/>
+  <text class="t" x="590" y="582" text-anchor="middle">Azure Container Apps</text>
+  <text class="ts" x="590" y="598" text-anchor="middle">hospedaje gestionado</text>
+  <rect class="box" x="750" y="560" width="150" height="48"/>
+  <text class="t" x="825" y="582" text-anchor="middle">PRE / PRO</text>
+  <text class="ts" x="825" y="598" text-anchor="middle">dominios + certificados</text>
+
+  <!-- Edges -->
+  <path class="edge" d="M480,166 L480,184"/>
+  <path class="edge" d="M480,214 L480,266"/>
+  <path class="edge" d="M395,146 C330,150 220,150 195,118" transform="translate(0,0)"/>
+  <path class="edge" d="M300,166 C340,176 360,210 395,232" />
+  <path class="edge" d="M300,159 L380,290"/>
+  <path class="edge" d="M480,358 L480,378"/>
+  <path class="edge" d="M380,402 C330,402 300,340 310,310"/>
+  <path class="edge" d="M580,300 L650,298"/>
+  <path class="edge" d="M580,318 L650,350"/>
+  <path class="edge" d="M580,336 L650,402"/>
+  <path class="edge" d="M310,305 L380,305"/>
+  <path class="dash" d="M250,584 L300,584"/>
+  <path class="dash" d="M430,584 L480,584"/>
+  <path class="dash" d="M590,560 C590,500 560,470 560,440"/>
+  <text class="ts" x="600" y="500">despliega</text>
+
+  <text class="ts" x="40" y="692">Caso anonimizado · sin datos ni código de cliente · diagrama de capacidades y decisiones de arquitectura — Jorge Alves González</text>
+</svg>
